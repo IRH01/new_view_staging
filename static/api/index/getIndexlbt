@@ -1,0 +1,75 @@
+{
+  "result": 0,
+  "msg": "操作成功",
+  "data": {
+    "pageNo": 1,
+    "totalPages": 1,
+    "pageSize": 20,
+    "totalRows": 5,
+    "list": [
+      {
+        "id": 355,
+        "pictureUrl": "http://public.13322.com/79d16aea.png",
+        "jumpUrl": "",
+        "remarks": "不跳转链接",
+        "time": 1501656736000,
+        "pictureOrder": 1,
+        "country": 0,
+        "platformTerminal": 4,
+        "pictureType": 1,
+        "relevanceId": 0,
+        "isDeleted": 0
+      },
+      {
+        "id": 348,
+        "pictureUrl": "http://public.13322.com/7846ec50.png",
+        "jumpUrl": "http://baidu.com",
+        "remarks": "跳转链接，进入到百度",
+        "time": 1501470323000,
+        "pictureOrder": 2,
+        "country": 0,
+        "platformTerminal": 4,
+        "pictureType": 1,
+        "relevanceId": 0,
+        "isDeleted": 0
+      },
+      {
+        "id": 322,
+        "pictureUrl": "http://public.13322.com/20690c68.png",
+        "jumpUrl": "http://market.13322.com/active/act/thActive/taiguo.html",
+        "remarks": "活动",
+        "time": 1495768826000,
+        "pictureOrder": 3,
+        "country": 0,
+        "platformTerminal": 4,
+        "pictureType": 1,
+        "isDeleted": 0
+      },
+      {
+        "id": 321,
+        "pictureUrl": "http://public.13322.com/44ff1df8.png",
+        "jumpUrl": "http://m.game.13322.com/gamelist/410090",
+        "remarks": "跳转进入生产环境，游戏",
+        "time": 1495768788000,
+        "pictureOrder": 4,
+        "country": 0,
+        "platformTerminal": 4,
+        "pictureType": 1,
+        "isDeleted": 0
+      },
+      {
+        "id": 284,
+        "pictureUrl": "http://public.13322.com/22ebe1a2.png",
+        "jumpUrl": "http://m.game.13322.com/gamelist/410145",
+        "remarks": "跳转链接进入到生产环境，游戏",
+        "time": 1490856155000,
+        "pictureOrder": 5,
+        "country": 0,
+        "platformTerminal": 4,
+        "pictureType": 1,
+        "isDeleted": 0
+      }
+    ]
+  },
+  "systemTime": 1511923488432
+}

@@ -1,0 +1,31 @@
+{
+  "result": 0,
+  "msg": "操作成功",
+  "data": {
+    "pageNo": 1,
+    "totalPages": 1,
+    "pageSize": 20,
+    "totalRows": 1,
+    "list": [
+      {
+        "id": 1147,
+        "title": "H5合作活动",
+        "creatorTime": 1491557611000,
+        "creator": "mrdeepen",
+        "type": 3,
+        "status": 1,
+        "handTime": null,
+        "content": null,
+        "isTop": 1,
+        "titleHref": null,
+        "terminalsType": 4,
+        "remarks": null,
+        "country": "0",
+        "explain": "3333",
+        "summary": "3333",
+        "imageUrl": "http://public.13322.com/402be6a8.jpg"
+      }
+    ]
+  },
+  "systemTime": 1511928430229
+}

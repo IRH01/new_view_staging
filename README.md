@@ -30,7 +30,8 @@ npm test
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 
-#######################################
-nginx配置文件nginx.conf
-static/api为接口请求的数据源。
+
+# nginx配置文件nginx.conf
+
+# static/api为接口请求的数据源。
 

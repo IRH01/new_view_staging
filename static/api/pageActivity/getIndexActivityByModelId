@@ -1,0 +1,35 @@
+{
+  "result": 0,
+  "msg": "操作成功",
+  "data": {
+    "pageNo": 1,
+    "totalPages": 1,
+    "pageSize": 20,
+    "totalRows": 1,
+    "list": [
+      {
+        "country": 0,
+        "game": 10145,
+        "redirectUrl": "http://baidu.com",
+        "endDate": 1517241600000,
+        "description": "1积分",
+        "updateTime": "2017-05-16",
+        "remark": "喂！我还没有上车呢！！",
+        "sort": 8,
+        "title": "喂！我还没有上车呢！！",
+        "type": 1,
+        "rotationImgUrl": "http://public.13322.com/646eb571.gif",
+        "platform": 4,
+        "updater": "mrdeepen",
+        "createTime": "2017-05-16",
+        "imageUrl": "http://public.13322.com/2df7ac5d.gif",
+        "creater": "mrdeepen",
+        "actType": 2,
+        "id": 282,
+        "position": 1,
+        "startDate": 1487174400000
+      }
+    ]
+  },
+  "systemTime": 1511928430206
+}

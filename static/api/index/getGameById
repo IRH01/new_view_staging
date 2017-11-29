@@ -1,0 +1,72 @@
+{
+  "result": 0,
+  "msg": "操作成功",
+  "data": {
+    "country": 0,
+    "gameType": [
+      {
+        "gameType": "8001",
+        "gameTypeName": "策略游戏"
+      },
+      {
+        "gameType": "8004",
+        "gameTypeName": "体育游戏"
+      },
+      {
+        "gameType": "8003",
+        "gameTypeName": "战棋游戏"
+      },
+      {
+        "gameType": "8022",
+        "gameTypeName": "独家游戏"
+      }
+    ],
+    "hottraveltImg": "http://public.13322.com/65246a83.gif",
+    "gameHallPic": "",
+    "developers": "13322",
+    "conntype": "TCP",
+    "platformType": 1,
+    "allImg": "http://public.13322.com/75abf852.gif",
+    "countryCurrency": "CNY",
+    "startGameUrl": "http://m.cnyxjc.1332255.com",
+    "rule": "<p style=\"font-size:16px;color:#333333;text-align:justify;font-family:arial;background-color:#FFFFFF;\">\r\n\t不知道从什么时候开始，大家都觉得驾照是有必要考的。刚刚高中毕业的学生党、甚至50多岁的中年人都去学习驾照，现在差不多人手一本驾照，没有驾照总觉得日常生活缺些什么。但是相应的，驾照考试也越来越难了。现在多地的科目二都已经实行电子路考，据说未来的科目三也会采用计算机评分，还有可能会增加项目。很多人对于越来越难的驾照考试表示非常担心。\r\n</p>\r\n<div class=\"img-container\" style=\"font-family:arial;background-color:#FFFFFF;\">\r\n\t<img class=\"large\" src=\"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=446224428,2884968925&amp;fm=173&amp;s=C8903ED502392580199581630300F053&amp;w=600&amp;h=337&amp;img.JPEG\" style=\"width:537px;\" /> \r\n</div>\r\n<p style=\"font-size:16px;color:#333333;text-align:justify;font-family:arial;background-color:#FFFFFF;\">\r\n\t考驾照一直是一些人的噩梦，而且新交规越来越严格，挂科的人也越来越多，不过或许在不久的将来，我们可以告别驾驶证了，现在有一种技术叫做无人驾驶。\r\n</p>\r\n<div class=\"img-container\" style=\"font-family:arial;background-color:#FFFFFF;\">\r\n\t<img class=\"large\" src=\"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2984147280,2668207545&amp;fm=173&amp;s=07107B8403A32AA13C28A115030090C3&amp;w=600&amp;h=333&amp;img.JPEG\" style=\"width:537px;\" /> \r\n</div>\r\n<p style=\"font-size:16px;color:#333333;text-align:justify;font-family:arial;background-color:#FFFFFF;\">\r\n\t想必说起无人驾驶，大家第一个会想到的是无人驾驶飞机。但是其实，无人驾驶汽车的研究也有十几年了，目前只有特斯拉推出了无人驾驶汽车的广告宣传片。像微软、谷歌等互联网公司，还有大众汽车等汽车公司都在研究这一领域的技术，都希望能率先把这项技术研发出来，可以抢先去抢占市场。\r\n</p>\r\n<div class=\"img-container\" style=\"font-family:arial;background-color:#FFFFFF;\">\r\n\t<img class=\"large\" src=\"https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1627884979,3261364381&amp;fm=173&amp;s=91145F900A1240CA50AB01DB0300C0AA&amp;w=600&amp;h=363&amp;img.JPEG\" style=\"width:537px;\" /> \r\n</div>\r\n<p style=\"font-size:16px;color:#333333;text-align:justify;font-family:arial;background-color:#FFFFFF;\">\r\n\t无人驾驶技术已经面世几年了，国外的谷歌、特斯拉、宝马，国内的阿里、百度都在研究无人驾驶技术，不过目前的技术还不够完善，特别是障碍物识别方面进展缓慢，毕竟路上的环境非常复杂，不仅有行人、行车，还有路障、路标、红绿灯，甚至还有一些不该出现在道路的东西，这些都得计算在内。\r\n</p>\r\n<div class=\"img-container\" style=\"font-family:arial;background-color:#FFFFFF;\">\r\n\t<img class=\"normal\" width=\"487px\" src=\"https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1048497775,3797677060&amp;fm=173&amp;s=FD04DB14625A59C00A5171D40300C0B0&amp;w=487&amp;h=300&amp;img.JPEG\" /> \r\n</div>\r\n<p style=\"font-size:16px;color:#333333;text-align:justify;font-family:arial;background-color:#FFFFFF;\">\r\n\t不过现实生活中还尚未做车主只要坐进车里，车辆会自动驶向目的地的功能。现在的无人驾驶技术一般都是像上图中在汽车上面安装一个驾驶雷达！前段时间百度的CEO就坐着自家研发的无人驾驶汽车上路，结果交警介入调查了，等交规改革的话不知道得等多少年，所以现在还是老老实实去考驾照吧，未来太遥远了。\r\n</p>\r\n<p style=\"font-size:16px;color:#333333;text-align:justify;font-family:arial;background-color:#FFFFFF;\">\r\n\t不过在未来相信技术成熟之后，人们出行会越来越方便，也不用再去考驾照了。\r\n</p>\r\n<p style=\"font-size:16px;color:#333333;text-align:justify;font-family:arial;background-color:#FFFFFF;\">\r\n\t大家觉得这个技术如何呢？又能在什么时候上市呢？\r\n</p>",
+    "sourUrl": "http://m.cnyxjc.1332255.com",
+    "platformTerminal": 4,
+    "alphabet": "lykc",
+    "packageSize": "",
+    "title": "乐盈电竞H5",
+    "curtypeName": "金币",
+    "timeout": 50000,
+    "iosAppUrl": "http://baidu.com",
+    "rate": 10.00,
+    "isOneself": 0,
+    "onlineTime": 1487347200000,
+    "androidAppUrl": "http://taobao.com",
+    "id": 10110,
+    "iconUrl": "http://public.13322.com/6f9c7ab.gif",
+    "packageName": "android:1234|ios:123458",
+    "giftbagUrl": "http://m.cnyxjc.1332255.com",
+    "tittleimgUrl": "http://public.13322.com/77fa2cdc.jpg",
+    "isRebate": 0,
+    "registTime": 1487411304000,
+    "summary": "还没考驾照朋友有福了，可能将来驾照再也不需要考了\r\n无人驾驶技术已经面世几年了，国外的谷歌、特斯拉、宝马，国内的阿里、百度都在研究无人驾驶技术，不过目前的技术还不够完善，特别是障碍物识别方面进展缓慢，毕竟路上的环境非常复杂，不仅有行人、行车，还有路障、路标、红绿灯，甚至还有一些不该出现在道路的东西，这些都得计算在内。",
+    "officalwebUrl": "http://m.cnyxjc.1332255.com",
+    "ip": "http://119.147.149.27:10000",
+    "updateUser": "mrdeepen",
+    "updateTime": 1502177298000,
+    "iceConnecttype": 1,
+    "boutiqueImg": "http://public.13322.com/3ff5a4ed.gif",
+    "versionCode": "",
+    "port": "",
+    "popularitVal": 268,
+    "startGameImgUrl": "http://public.13322.com/3ab71a60.png",
+    "name": "乐盈电竞 H5",
+    "havingGameas": 0,
+    "position": 2,
+    "hotImg": "http://public.13322.com/6ceef10c.gif",
+    "isRechtoplatform": 1,
+    "status": 1,
+    "desc": "hahahah"
+  },
+  "systemTime": 1511928954664
+}
