@@ -33,5 +33,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 # nginx配置文件nginx.conf
 
+# hosts文件修改为  127.0.0.1   demo.com
+
+# 访问地址为 demo.com
+
 # static/api为接口请求的数据源。
 

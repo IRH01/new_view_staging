@@ -5,16 +5,19 @@
     </vtitle>
     <div class="content">
       <div class="form-content">
-        <div class="user-name borderBottom-1px" >
-          <input type="text" autofocus="autofocus" @keydown="but" v-model="user.name" placeholder="请输入账号，6-18位字母和数字" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" maxlength="25">
+        <div class="user-name borderBottom-1px">
+          <input type="text" autofocus="autofocus" @keydown="but" v-model="user.name" placeholder="请输入账号，6-18位字母和数字"
+                 onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" maxlength="25">
           <i @click="delxx" v-show="this.user.name"></i>
         </div>
         <div class="user-pwd borderBottom-1px">
-          <input @keydown="but" type="password" maxlength="25" placeholder="请输入密码，6-18位字符" v-model="user.pwd"  onpaste="return false" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+          <input @keydown="but" type="password" maxlength="25" placeholder="请输入密码，6-18位字符" v-model="user.pwd"
+                 onpaste="return false" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
           <span :class="{'showPwd':showPwd1}" @click="togglePwdShow(1)"></span>
         </div>
         <div class="user-pwd-comfirm borderBottom-1px">
-          <input @keydown="but" type="password" maxlength="25" placeholder="请确认密码" v-model="user.pwdVCom" onpaste="return false" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+          <input @keydown="but" type="password" maxlength="25" placeholder="请确认密码" v-model="user.pwdVCom"
+                 onpaste="return false" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
           <span :class="{'showPwd':showPwd2}" @click="togglePwdShow(2)"></span>
         </div>
         <popUps ref="pop"></popUps>
@@ -33,29 +36,29 @@
   let fromGamingUrl = window.location.search;
 
   export default {
-    data(){
+    data() {
       return {
-        user:{name:'',pwd:'',pwdVCom:''},
-        showPwd1:false,
-        showPwd2:false,
-        platformId:4,
-        xxshow :false
+        user: {name: '', pwd: '', pwdVCom: ''},
+        showPwd1: false,
+        showPwd2: false,
+        platformId: 4,
+        xxshow: false
       }
     },
-    watch:{
-      $route(newVal){
+    watch: {
+      $route(newVal) {
         this.showPwd1 = false;
         this.showPwd2 = false;
-        if(newVal.path.indexOf('register')!=-1){
-          this.statisticsPageTraffic('2',this.userInfo.userId?this.userInfo.userId:'',window.location.href);
-          this.user = {name:'',pwd:'',pwdVCom:''};
+        if (newVal.path.indexOf('register') != -1) {
+          this.statisticsPageTraffic('2', this.userInfo.userId ? this.userInfo.userId : '', window.location.href);
+          this.user = {name: '', pwd: '', pwdVCom: ''};
           this.showPwd1 = false;
           this.showPwd2 = false;
-          $('.user-pwd-comfirm input').attr('type','password');
-          $('.user-pwd input').attr('type','password');
+          $('.user-pwd-comfirm input').attr('type', 'password');
+          $('.user-pwd input').attr('type', 'password');
           this.platformId = 4;
           let Requres = new UrlSearch();
-          if(Requres.gid){
+          if (Requres.gid) {
             this.platformId = Requres.gid;
           }
 //          if(sessionStorage.getItem("registerGid")){
@@ -64,16 +67,16 @@
         }
       }
     },
-    created(){
-      this.statisticsPageTraffic('2',this.userInfo.userId?this.userInfo.userId:'',window.location.href);
+    created() {
+      this.statisticsPageTraffic('2', this.userInfo.userId ? this.userInfo.userId : '', window.location.href);
       this.$nextTick(function () {
         let Requres = new UrlSearch();
 
-        if(Requres.cid){
-          sessionStorage.setItem("registerCid",Requres.cid);
+        if (Requres.cid) {
+          sessionStorage.setItem("registerCid", Requres.cid);
         }
         this.platformId = 4;
-        if(Requres.gid){
+        if (Requres.gid) {
           this.platformId = Requres.gid;
         }
 //        if(Requres.gid){
@@ -83,146 +86,146 @@
 //        }
       });
     },
-    methods:{
-      back(){
+    methods: {
+      back() {
         let Requres = new UrlSearch();
-        if(Requres.url){
-          window.location.href=decodeURIComponent(Requres.url);
-        }else {
+        if (Requres.url) {
+          window.location.href = decodeURIComponent(Requres.url);
+        } else {
           window.history.back();
         }
       },
-      goLogin(){
-          this.$router.push({path:`login${fromGamingUrl}`});
+      goLogin() {
+        this.$router.push({path: `login${fromGamingUrl}`});
       },
-      togglePwdShow(num){
-        if(num==1){
-          if(!this.showPwd1){
-            $('.user-pwd input').attr('type','text');
+      togglePwdShow(num) {
+        if (num == 1) {
+          if (!this.showPwd1) {
+            $('.user-pwd input').attr('type', 'text');
 
-          }else{
-            $('.user-pwd input').attr('type','password');
+          } else {
+            $('.user-pwd input').attr('type', 'password');
           }
           this.showPwd1 = !this.showPwd1;
-        }else{
-          if(!this.showPwd2){
-            $('.user-pwd-comfirm input').attr('type','text');
-          }else{
-            $('.user-pwd-comfirm input').attr('type','password');
+        } else {
+          if (!this.showPwd2) {
+            $('.user-pwd-comfirm input').attr('type', 'text');
+          } else {
+            $('.user-pwd-comfirm input').attr('type', 'password');
           }
           this.showPwd2 = !this.showPwd2;
         }
       },
       but() {
-          let _this = this;
-        if(!this.user.name || !this.user.pwd || !this.user.pwdVCom) {
+        let _this = this;
+        if (!this.user.name || !this.user.pwd || !this.user.pwdVCom) {
           _this.$refs.goReg.style.background = '#99dcff'
-        }else {
+        } else {
           _this.$refs.goReg.style.background = "deepskyblue";
           _this.$refs.goReg.style.background = "linear-gradient(to right,#00C6FF,#0072FF)";
         }
       },
-      goRegister(){
-        if(!this.user.name && !this.user.pwd && !this.user.pwdVCom){
+      goRegister() {
+        if (!this.user.name && !this.user.pwd && !this.user.pwdVCom) {
           this.$refs.pop.show('');
           return;
         }
-        if(!this.user.name){
+        if (!this.user.name) {
           this.$refs.pop.show('请输入账号');
           return;
         }
-        if(!this.user.pwd){
+        if (!this.user.pwd) {
           this.$refs.pop.show('请输入密码');
           return;
         }
-        if(!this.user.pwdVCom){
+        if (!this.user.pwdVCom) {
           this.$refs.pop.show('请再次输入密码');
           return;
         }
         //帐号限制为：6-18位的数字和字母组合
-        if(!(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,18}$/.test(String(this.user.name)))){
+        if (!(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,18}$/.test(String(this.user.name)))) {
           this.$refs.pop.show('帐号不符合要求，请重新输入');
           return;
         }
-        if(!(/^[a-zA-Z0-9]{6,18}$/.test(String(this.user.pwd)))){
+        if (!(/^[a-zA-Z0-9]{6,18}$/.test(String(this.user.pwd)))) {
           this.$refs.pop.show('密码不符合要求，请重新输入');
           return;
         }
-        if(this.user.pwd!==this.user.pwdVCom){
+        if (this.user.pwd !== this.user.pwdVCom) {
           this.$refs.pop.show('确认密码错误，请重新输入');
           return;
         }
 
         this.axios.get('/api/register/doRegister', {
           params: {
-            account:this.user.name,
-            password:hex_md5(this.user.pwd).toUpperCase(),
-            platformId:this.platformId,type:1,
-            channelId:(sessionStorage.getItem("gameCid")?sessionStorage.getItem("gameCid"):this.platformId)?sessionStorage.getItem("gameCid")?sessionStorage.getItem("gameCid"):this.platformId:''
+            account: this.user.name,
+            password: hex_md5(this.user.pwd).toUpperCase(),
+            platformId: this.platformId, type: 1,
+            channelId: (sessionStorage.getItem("gameCid") ? sessionStorage.getItem("gameCid") : this.platformId) ? sessionStorage.getItem("gameCid") ? sessionStorage.getItem("gameCid") : this.platformId : ''
           }
-        }).then((res)=>{
+        }).then((res) => {
           res = res.data;
-          if(res.result==0){
-            setTimeout(()=>{
+          if (res.result == 0) {
+            setTimeout(() => {
 
               this.axios.get('/api/login/doLogin/V2', {
                 params: {
-                  platformId:'31111',
-                  account:this.user.name,
-                  password:hex_md5(this.user.pwd).toUpperCase(),
-                  autologin:true,
-                  channelId:(sessionStorage.getItem("gameCid")?sessionStorage.getItem("gameCid"):sessionStorage.getItem("registerCid"))?sessionStorage.getItem("gameCid")?sessionStorage.getItem("gameCid"):sessionStorage.getItem("registerCid"):''
+                  platformId: '31111',
+                  account: this.user.name,
+                  password: hex_md5(this.user.pwd).toUpperCase(),
+                  autologin: true,
+                  channelId: (sessionStorage.getItem("gameCid") ? sessionStorage.getItem("gameCid") : sessionStorage.getItem("registerCid")) ? sessionStorage.getItem("gameCid") ? sessionStorage.getItem("gameCid") : sessionStorage.getItem("registerCid") : ''
                 }
-              }).then((response)=>{
+              }).then((response) => {
                 response = response.data;
-                if(response.result == 0){
-                  localStorage.setItem('token',response.token);
+                if (response.result == 0) {
+                  localStorage.setItem('token', response.token);
                   this.getUserInfo();
                   let Requres = new UrlSearch();
-                  if(Requres.url){
-                    if(decodeURIComponent(Requres.url).indexOf("?")!=-1){
-                      top.location.href=decodeURIComponent(Requres.url)+"&token="+response.token;
-                    }else{
-                      top.location.href=decodeURIComponent(Requres.url)+"?token="+response.token;
+                  if (Requres.url) {
+                    if (decodeURIComponent(Requres.url).indexOf("?") != -1) {
+                      top.location.href = decodeURIComponent(Requres.url) + "&token=" + response.token;
+                    } else {
+                      top.location.href = decodeURIComponent(Requres.url) + "?token=" + response.token;
                     }
-                  }else if(sessionStorage.getItem("GamingIdUrl")){
-                    if(decodeURIComponent(sessionStorage.getItem("GamingIdUrl")).indexOf("?")!=-1){
-                      top.location.href=decodeURIComponent(sessionStorage.getItem("GamingIdUrl"))+"&token="+response.token;
-                    }else{
-                      top.location.href=decodeURIComponent(sessionStorage.getItem("GamingIdUrl"))+"?token="+response.token;
+                  } else if (sessionStorage.getItem("GamingIdUrl")) {
+                    if (decodeURIComponent(sessionStorage.getItem("GamingIdUrl")).indexOf("?") != -1) {
+                      top.location.href = decodeURIComponent(sessionStorage.getItem("GamingIdUrl")) + "&token=" + response.token;
+                    } else {
+                      top.location.href = decodeURIComponent(sessionStorage.getItem("GamingIdUrl")) + "?token=" + response.token;
                     }
-                    setTimeout(()=>{
+                    setTimeout(() => {
                       sessionStorage.removeItem("GamingIdUrl")
-                    },200)
-                  } else if(!Requres.cid&&Requres.gid){
-                    window.location.href = this.Url + '/games/'+ Requres.gid+"?token="+response.token;
-                  }else if(Requres.cid&&Requres.gid){
-                    window.location.href = this.Url + '/games/'+ Requres.gid+"?token="+response.token+'&cid='+Requres.cid;
-                  }else{
-                    top.location.href = this.Url+'\\mine';
+                    }, 200)
+                  } else if (!Requres.cid && Requres.gid) {
+                    window.location.href = this.Url + '/games/' + Requres.gid + "?token=" + response.token;
+                  } else if (Requres.cid && Requres.gid) {
+                    window.location.href = this.Url + '/games/' + Requres.gid + "?token=" + response.token + '&cid=' + Requres.cid;
+                  } else {
+                    top.location.href = this.Url + '\\mine';
                   }
                 }
-              }).catch( (response) => {
+              }).catch((response) => {
                 console.log(response);
               });
-            },200);
-          }else{
+            }, 200);
+          } else {
             this.$refs.pop.show(res.msg);
           }
-        }).catch( (response) => {
+        }).catch((response) => {
           console.log(response);
         });
       },
       delxx() {
-         this.user.name=""
+        this.user.name = ""
       }
     },
-    computed:{
+    computed: {
       ...mapState([
         'userInfo'
       ])
     },
-    components:{
+    components: {
       Vtitle,
       popUps
     }
@@ -234,7 +237,7 @@
   .register {
     height: 100%;
     background-color: #FFFFFF;
-    .title .title-r span{
+    .title .title-r span {
       font-size: 0.15rem;
       float: right;
       padding-right: 0.1rem;
@@ -250,26 +253,26 @@
         display: flex;
         margin: 0.3rem auto;
         height: 0.4rem;
-        line-height:0.4rem;
+        line-height: 0.4rem;
         width: 100%;
-        font-size:0.14rem;
+        font-size: 0.14rem;
         input {
           background-color: #FFFFFF;
           display: block;
-          flex:1;
+          flex: 1;
           padding-left: 0.15rem;
         }
         span {
           display: block;
-          height:0.4rem;
+          height: 0.4rem;
           width: 0.4rem;
           background: url("./biyan.png") no-repeat center;
-          -webkit-background-size:40%;
-          background-size:40%;
+          -webkit-background-size: 40%;
+          background-size: 40%;
         }
-        i{
+        i {
           display: block;
-          width:0.3rem;
+          width: 0.3rem;
           height: 0.4rem;
           background: url("./xx.png") no-repeat right;
         }
@@ -277,27 +280,27 @@
       .user-pwd span.showPwd,
       .user-pwd-comfirm span.showPwd {
         background: url("./zhengyan.png") no-repeat center;
-        -webkit-background-size:40%;
-        background-size:40%;
+        -webkit-background-size: 40%;
+        background-size: 40%;
       }
       .hint {
         display: none;
       }
     }
-    .goRegister{
+    .goRegister {
       margin: 0.3rem auto;
       height: 0.4rem;
-      line-height:0.4rem;
-      font-size:0.15rem;
+      line-height: 0.4rem;
+      font-size: 0.15rem;
       border-radius: 0.3rem;
       text-align: center;
       width: 100%;
       color: #FFFFFF;
       background-color: deepskyblue;
-      background-image: linear-gradient(to right,#00C6FF,#0072FF);
-      background:-webkit-linear-gradient(to right,#00C6FF,#0072FF);
-      background: -moz-linear-gradient(to right,#00C6FF,#0072FF);
-      background: -o-linear-gradient(to right,#00C6FF,#0072FF);
+      background-image: linear-gradient(to right, #00C6FF, #0072FF);
+      background: -webkit-linear-gradient(to right, #00C6FF, #0072FF);
+      background: -moz-linear-gradient(to right, #00C6FF, #0072FF);
+      background: -o-linear-gradient(to right, #00C6FF, #0072FF);
     }
   }
 </style>
